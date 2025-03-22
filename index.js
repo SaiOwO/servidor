@@ -5,7 +5,7 @@ const socketIo = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-
+const port = process.env.PORT || 4000;
 const gameVariables = {};
 
 io.on("connection", (socket) => {
@@ -42,7 +42,6 @@ io.on("connection", (socket) => {
     });
 });
 
-const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Servidor WebSocket corriendo: ${PORT}`);
+    console.log(`Servidor WebSocket corriendo en el Port: ${PORT}`);
 });
