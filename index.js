@@ -18,3 +18,8 @@ io.on('connection', (socket) => {
     io.emit('message', args);
     console.log(args)
   });
+   socket.on('event_name', (...args) => {
+    io.emit('message2', args);
+     console.log(args)
+  });
+});
