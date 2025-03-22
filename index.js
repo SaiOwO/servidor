@@ -42,6 +42,6 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(PORT, () => {
-    console.log(`Servidor WebSocket corriendo en el Port: ${PORT}`);
+server.listen(port, () => {
+    console.log(`Servidor WebSocket corriendo en el Port: ${port}`);
 });
